@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schoology</title>
+    <!-- Specify the path to your favicon image -->
+    <link rel="icon" href="images/schoology-logo.png" type="image/png">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
+    <style>
+    <style>
+        /* Move Fusion title back to the top-left corner */
+        nav {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            padding: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px; /* Restore the original font size */
+        }
+
+        /* Center the "Fusion is awesome!" text */
+        .fusion-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center horizontally */
+            margin-top: 10px; /* Add margin to separate it from the title */
+        }
+
+        .fusion-text {
+            font-size: 70px; /* Make it bigger */
+        }
+
+        /* Style for the randomized subtitles */
+        #randomSubtitle {
+            font-size: 24px; /* Set font size for subtitles */
+            text-align: center; /* Center align subtitles */
+        }
+
+        /* Move search bar to top-right corner */
+        .search {
+            text-align: right;
+            margin-top: 20px;
+            padding: 20px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    </style>
+    
+    <script>
+        // Array of possible subtitles
+        const subtitles = ["RIP GXME SPXCE", "RIP GXME SPXCE", "RIP GXME SPXCE", "RIP GXME SPXCE"];
+
+        // Function to pick a random subtitle
+        function getRandomSubtitle() {
+            const randomIndex = Math.floor(Math.random() * subtitles.length);
+            return subtitles[randomIndex];
+        }
+
+        // Set the random subtitle
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const randomSubtitleElement = document.getElementById("randomSubtitle");
+            randomSubtitleElement.textContent = getRandomSubtitle();
+        });
+    </script>
 </head>
 <body>
     <nav>
-        <img src="images/logo.png" alt="logo">
-        <h1>Fusion</h1>
-        <h2 id="randomSubtitle"></h2> <!-- Random subtitle will go here -->
+        <h1>FUSION</h1>
     </nav>
-
-    <div class="featured">
-        <h1>Popular:</h1>
-        <div class="column">
-          <a href="games/bob-the-robber-2/">
-            <img src="images/bob-the-robber-2.png">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/vex7/">
-            <img src="images/vex7.jpeg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="games/vex6">
-            <img src="images/vex6.jpeg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-        <div class="row">
-          <a href="games/drive-mad/">
-            <img src="images/drive-mad.jpg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-            </a>
-        </div>
-        <div class="column">
-          <a href="games/moto-x3m/">
-            <img src="images/moto-x3m.jpg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-          <a href="games/retro-bowl/">
-            <img src="images/retro-bowl.jpg">
-            <div class="play-button">
-                <i class="fa-solid fa-play"></i>
-            </div>
-          </a>
-        </div>
-    </div>
 
     <div class="content">
 
@@ -71,6 +81,14 @@
         <input type="text" placeholder="Search..." oninput="">
         <button><i class="fas fa-search"></i></button>
     </div>
+
+    <!-- Center the "Fusion is awesome!" text -->
+    <div class="fusion-text-container">
+        <div class="fusion-text">FUSION</div>
+    </div>
+
+    <!-- Move the randomized subtitles below the "Fusion is awesome!" text -->
+    <h2 id="randomSubtitle"></h2>
 
     <div id="games">
         <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
@@ -84,21 +102,6 @@
         <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
     </div>
     </div>
-
-    <script>
-        // Array of possible subtitles
-        const subtitles = ["Subtitle 1", "Subtitle 2", "Subtitle 3", "Subtitle 4"];
-
-        // Function to pick a random subtitle
-        function getRandomSubtitle() {
-            const randomIndex = Math.floor(Math.random() * subtitles.length);
-            return subtitles[randomIndex];
-        }
-
-        // Set the random subtitle
-        const randomSubtitleElement = document.getElementById("randomSubtitle");
-        randomSubtitleElement.textContent = getRandomSubtitle();
-    </script>
 
     <script src="script.js"></script>
 </body>
