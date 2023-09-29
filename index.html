@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blazer</title>
+    <title>Schoology</title>
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
 </head>
 <body>
     <nav>
         <img src="images/logo.png" alt="logo">
-        <h1>Gamesidk</h1>
+        <h1>Fusion</h1>
+        <h2 id="randomSubtitle"></h2> <!-- Random subtitle will go here -->
     </nav>
 
     <div class="featured">
@@ -60,7 +61,6 @@
             </div>
           </a>
         </div>
-        </div>
     </div>
 
     <div class="content">
@@ -84,7 +84,22 @@
         <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
     </div>
     </div>
+
+    <script>
+        // Array of possible subtitles
+        const subtitles = ["Subtitle 1", "Subtitle 2", "Subtitle 3", "Subtitle 4"];
+
+        // Function to pick a random subtitle
+        function getRandomSubtitle() {
+            const randomIndex = Math.floor(Math.random() * subtitles.length);
+            return subtitles[randomIndex];
+        }
+
+        // Set the random subtitle
+        const randomSubtitleElement = document.getElementById("randomSubtitle");
+        randomSubtitleElement.textContent = getRandomSubtitle();
+    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-<script src="script.js"></script>
