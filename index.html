@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
     <style>
+    <style>
         /* Move Fusion title back to the top-left corner */
         nav {
             display: flex;
@@ -19,45 +20,34 @@
         h1 {
             margin: 0;
             font-size: 36px; /* Restore the original font size */
-            color: white; /* Set text color to white */
         }
 
-        /* Center the "FUSION" text */
+        /* Center the "Fusion is awesome!" text */
         .fusion-text-container {
             display: flex;
             flex-direction: column;
             align-items: center; /* Center horizontally */
-            margin-top: 10px; /* Move it down */
+            margin-top: 120px; /* Add margin to separate it from the title */
         }
 
         .fusion-text {
-            font-size: 70px; /* Make it bigger */
-            color: white; /* Set text color to white */
-            margin-top: 100px; /* Move it down by 100px */
+            font-size: 100px; /* Make it bigger */
         }
 
         /* Style for the randomized subtitles */
         #randomSubtitle {
             font-size: 24px; /* Set font size for subtitles */
             text-align: center; /* Center align subtitles */
-            margin-top: 20px; /* Move it down */
-            color: white; /* Set text color to white */
         }
 
         /* Move search bar to top-right corner */
         .search {
             text-align: right;
+            margin-top: 20px;
             padding: 20px;
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 999; /* Force it above other elements */
-        }
-
-        /* Style for search input and button */
-        .search input[type="text"], .search button {
-            background-color: white; /* Set background color to white */
-            color: black; /* Set text color to black */
         }
     </style>
     
@@ -92,12 +82,12 @@
         <button><i class="fas fa-search"></i></button>
     </div>
 
-    <!-- Center the "FUSION" text -->
+    <!-- Center the "Fusion is awesome!" text -->
     <div class="fusion-text-container">
         <div class="fusion-text">FUSION</div>
     </div>
 
-    <!-- Move the randomized subtitles below the "FUSION" text -->
+    <!-- Move the randomized subtitles below the "Fusion is awesome!" text -->
     <h2 id="randomSubtitle"></h2>
 
     <div id="games">
