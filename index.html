@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
     <style>
+        /* Set the background color of the entire page */
+        body {
+            background-color: #2e2e2e;
+        }
+
         /* Move Fusion title back to the top-left corner */
         nav {
             display: flex;
@@ -21,7 +26,7 @@
             font-size: 36px; /* Restore the original font size */
         }
 
-        /* Center the "Fusion is awesome!" text */
+        /* Center the "FUSION" text */
         .fusion-text-container {
             display: flex;
             flex-direction: column;
@@ -29,9 +34,14 @@
             margin-top: 120px; /* Add margin to separate it from the title */
         }
 
+        /* Style for the "FUSION" text with gradient, font-family, and bold */
         .fusion-text {
             font-size: 150px;
-            color: white; /* Add this line to set text color to white */
+            background: linear-gradient(to right, #8b51fe 52.5%, #ffffff 50%); /* Gradient from purple to white */
+            -webkit-background-clip: text; /* Clip text to gradient */
+            color: transparent; /* Hide the text color */
+            font-family: 'Santral', sans-serif; /* Set the font-family to Santral */
+            font-weight: bold; /* Make the text bold */
         }
 
         /* Style for the randomized subtitles */
@@ -59,10 +69,13 @@
             align-items: center; /* Center items vertically */
         }
 
-        /* Style for the "Game Title" text with increased font size */
+        /* Style for the "Game Title" text with gradient */
         .game-title {
             margin: 0;
             font-size: 76px; /* Increase the font size for the Game Title */
+            background: linear-gradient(to right, #8b51fe 52.5%, #ffffff 50%); /* Gradient from purple to white */
+            -webkit-background-clip: text; /* Clip text to gradient */
+            color: transparent; /* Hide the text color */
         }
 
         /* Style for the search bar */
@@ -104,7 +117,7 @@
     <div class="content">
         <hr>
 
-        <!-- Center the "Fusion is awesome!" text -->
+        <!-- Center the "FUSION" text with two different colors -->
         <div class="fusion-text-container">
             <div class="fusion-text">FUSION</div>
         </div>
@@ -122,8 +135,7 @@
             <a href="games/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
             <a href="games/slope/"><img src="images/slope.jpg" alt="slope"></a>
             <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-            <a href="games/Basketball-Stars/"><img src="images/basketball-stars.png" 
-            alt="basketball stars"></a>
+            <a href="games/Basketball-Stars/"><img src="images/basketball-stars.png" alt="basketball stars"></a>
         </div>
     </div>
 
