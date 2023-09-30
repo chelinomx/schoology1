@@ -13,6 +13,8 @@
         /* Set the background color of the entire page */
         body {
             background-color: #2e2e2e;
+            opacity: 0; /* Set initial opacity to 0 for the entire page */
+            animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation to the entire page */
         }
 
         /* Move Fusion title back to the top-left corner */
@@ -32,6 +34,8 @@
             flex-direction: column;
             align-items: center; /* Center horizontally */
             margin-top: 150px; /* Add margin to separate it from the title */
+            opacity: 0; /* Set initial opacity to 0 for the Fusion text */
+            animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation to the Fusion text */
         }
 
         /* Style for the "FUSION" text with gradient, font-family, and bold */
@@ -49,6 +53,8 @@
             font-size: 50px; /* Set font size for subtitles */
             text-align: center; /* Center align subtitles */
             color: white;
+            opacity: 0; /* Set initial opacity to 0 for subtitles */
+            animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation to subtitles */
         }
 
         /* Move search bar to top-right corner and place it above all elements */
@@ -60,7 +66,8 @@
             top: 20px;
             right: 20px;
             z-index: 9999;  
-        
+            opacity: 0; /* Set initial opacity to 0 for the search bar */
+            animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation to the search bar */
         }
 
         /* Create a container for the "Game Title" text and search bar */
@@ -85,24 +92,18 @@
             margin-top: 20px;
             padding: 20px;
         }
-    </style>
-    
-    <script>
-        // Array of possible subtitles
-        const subtitles = ["RIP GXME SPXCE", "RIP GXME SPXCE", "RIP GXME SPXCE", "RIP GXME SPXCE"];
 
-        // Function to pick a random subtitle
-        function getRandomSubtitle() {
-            const randomIndex = Math.floor(Math.random() * subtitles.length);
-            return subtitles[randomIndex];
+        /* Keyframes for the fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
-
-        // Set the random subtitle
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const randomSubtitleElement = document.getElementById("randomSubtitle");
-            randomSubtitleElement.textContent = getRandomSubtitle();
-        });
-    </script>
+    </style>
+    <!-- ... (other scripts and styles) -->
 </head>
 <body>
     <nav>
@@ -143,3 +144,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
