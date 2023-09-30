@@ -38,7 +38,7 @@
         #randomSubtitle {
             font-size: 50px; /* Set font size for subtitles */
             text-align: center; /* Center align subtitles */
-          color: white;
+            color: white;
         }
 
         /* Move search bar to top-right corner and place it above all elements */
@@ -50,6 +50,26 @@
             top: 20px;
             right: 20px;
             z-index: 9999; /* Set a high z-index value to ensure it's on top of all elements */
+        }
+
+        /* Create a container for the "Game Title" text and search bar */
+        .title-and-search {
+            display: flex;
+            justify-content: space-between; /* Spread items evenly */
+            align-items: center; /* Center items vertically */
+        }
+
+        /* Style for the "Game Title" text */
+        .game-title {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* Style for the search bar */
+        .search {
+            text-align: right;
+            margin-top: 20px;
+            padding: 20px;
         }
     </style>
     
@@ -72,16 +92,17 @@
 </head>
 <body>
     <nav>
-        <h1>FUSION</h1>
+        <div class="title-and-search">
+            <h1 class="game-title">FUSION</h1>
+            <div class="search">
+                <input type="text" placeholder="Search..." oninput="">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
     </nav>
 
     <div class="content">
         <hr>
-
-        <div class="search">
-            <input type="text" placeholder="Search..." oninput="">
-            <button><i class="fas fa-search"></i></button>
-        </div>
 
         <!-- Center the "Fusion is awesome!" text -->
         <div class="fusion-text-container">
