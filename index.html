@@ -15,6 +15,12 @@
             background-color: #2e2e2e;
             opacity: 0; /* Set initial opacity to 0 for the entire page */
             animation: fadeIn 1s ease-in-out forwards; /* Apply fade-in animation to the entire page */
+            scroll-behavior: smooth; /* Enable smooth scrolling */
+        }
+
+        /* Set smooth scrolling for HTML element as well */
+        html {
+            scroll-behavior: smooth;
         }
 
         /* Move Fusion title back to the top-left corner */
@@ -93,6 +99,17 @@
             padding: 20px;
         }
 
+        /* Style for the "Get Started" button */
+        .center-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #getStartedButton {
+            font-size: 24px; /* Increase the font size for the button */
+            padding: 10px 20px; /* Increase padding for button size */
+        }
+
         /* Keyframes for the fade-in animation */
         @keyframes fadeIn {
             from {
@@ -119,6 +136,14 @@
             const randomSubtitleElement = document.getElementById("randomSubtitle");
             randomSubtitleElement.textContent = getRandomSubtitle();
         });
+
+        // Add scroll functionality to "Get Started" button
+        window.addEventListener('load', function() {
+            var getStartedButton = document.getElementById("getStartedButton");
+            getStartedButton.addEventListener("click", function() {
+                window.scrollBy(0, 400);
+            });
+        });
     </script>
 </head>
 <body>
@@ -143,8 +168,13 @@
         <!-- Move the randomized subtitles below the "Fusion is awesome!" text -->
         <h2 id="randomSubtitle"></h2>
 
+        <!-- Center and style the "Get Started" button -->
+        <div class="center-button">
+            <button id="getStartedButton">Get Started</button>
+        </div>
+
         <div id="games">
-            <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"><a
+            <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
             <a href="games/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
             <a href="games/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
             <a href="games/"><img src="images/mc.png" alt="minecraft"></a>
@@ -153,8 +183,7 @@
             <a href="games/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
             <a href="games/slope/"><img src="images/slope.jpg" alt="slope"></a>
             <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-            <a href="games/Basketball-Stars/"><img src="images/basketball-stars.png" alt="basketball stars"><a
-            <a href="games/1v1lol/"><img src="images/1v1 lol.png" alt="1v1.lol"><a
+            <a href="games/Basketball-Stars/"><img src="images/basketball-stars.png" alt="basketball stars"></a>
         </div>
     </div>
 
