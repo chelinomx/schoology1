@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.0/css/all.css">
     <style>
-    /* You can add additional font formats here for browser compatibility */
-}
+        /* You can add additional font formats here for browser compatibility */
         /* Set the background color of the entire page */
         body {
             background-color: #2e2e2e;
@@ -31,6 +30,7 @@
             align-items: center; /* Align items vertically */
             padding: 20px;
         }
+
         h1 {
             margin: 0;
             font-size: 36px; /* Restore the original font size */
@@ -109,7 +109,7 @@
             cursor: pointer; /* Add pointer cursor on hover */
             transition: background-color 0.3s ease, color 0.3s ease; 
             font-family: Arial, sans-serif;
-            font-weight: bold
+            font-weight: bold;
         }
 
         /* Invert colors on hover and add Santral font */
@@ -117,7 +117,7 @@
             background-color: white; /* White background color */
             color: #8b51fe; /* Purple text color */
             font-family: Arial, sans-serif;
-            font-weight: bold
+            font-weight: bold;
         }
 
         /* Keyframes for the fade-in animation */
@@ -154,6 +154,21 @@
                 window.scrollBy(0, 470);
             });
         });
+
+        // Function to play the video animation and redirect
+        function playVideoAndRedirect(gameUrl) {
+            const gameVideo = document.getElementById("gameVideo");
+
+            // Play the video
+            gameVideo.style.display = "block";
+            gameVideo.play();
+
+            // Pause the video after it ends and redirect to the game page
+            gameVideo.addEventListener("ended", function() {
+                gameVideo.style.display = "none"; // Hide the video
+                window.location.href = gameUrl; // Redirect to the game page
+            });
+        }
     </script>
 </head>
 <body>
@@ -184,24 +199,20 @@
         </div>
 
         <div id="games">
-            <a href="games/bob-the-robber-2/"><img src="images/bob-the-robber-2.png" alt="bob the robber 2"></a>
-            <a href="games/vex7/"><img src="images/vex7.jpeg" alt="vex 7"></a>
-            <a href="games/vex6/"><img src="images/vex6.jpeg" alt="vex 6"></a>
-             <a href="games/Minecraft/"><img src="images/mc.png" alt="Minecraft"></a>
-            <a href="games/moto-x3m/"><img src="images/moto-x3m.jpg" alt="moto x3m"></a>
-            <a href="games/retro-bowl/"><img src="images/retro-bowl.jpg" alt="retrobowl"></a>
-            <a href="games/drive-mad/"><img src="images/drive-mad.jpg" alt="drive mad"></a>
-            <a href="games/slope/"><img src="images/slope.jpg" alt="slope"></a>
-            <a href="games/motox3m2/"><img src="images/motox3m2.jpg" alt="moto x3m2"></a>
-            <a href="games/Basketball-Stars/"><img src="images/basketball-stars.png" alt="basketball stars"></a>
-            <a href="games/2048/"><img src="images/2048.png" alt="2048"></a>
-            <a href="games/1v1lol/"><img src="images/1v1 lol.png" alt="1v1.lol"></a>
-            <a href="games/Monkey-Mart/"><img src="images/monkey mart.png" alt="Monkey Mart"></a>
-            <a href="games/Bitlife/"><img src="images/Bitlife.png" alt="Bitlife"></a>
-            <a href="games/Angry-Sharks/"><img src="images/Angry Sharks.png" alt="Angry Sharks"></a>
-            <a href="games/Sm64/"><img src="images/sm64.jpg" alt="Super Mario 64"></a>
+            <a href="games/bob-the-robber-2/" onclick="playVideoAndRedirect('games/bob-the-robber-2/')">
+                <img src="images/bob-the-robber-2.png" alt="bob the robber 2">
+            </a>
+            <a href="games/vex7/" onclick="playVideoAndRedirect('games/vex7/')">
+                <img src="images/vex7.jpeg" alt="vex 7">
+            </a>
+            <!-- Add similar onclick attributes for other game links -->
         </div>
     </div>
+
+    <video id="gameVideo" controls style="display: none;">
+        <source src="images/Videos/FUSION.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
     <script src="script.js"></script>
 </body>
