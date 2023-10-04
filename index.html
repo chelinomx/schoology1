@@ -152,7 +152,13 @@
             var getStartedButton = document.getElementById("getStartedButton");
             getStartedButton.addEventListener("click", function() {
                 window.scrollBy(0, 470);
-            });
+        });
+            
+            // Function to show the notification when the page loads
+        window.addEventListener('load', function() {
+            // Customize the message and styling as needed
+            alert('Welcome to our website!'); // Basic alert
+           });
         });
     </script>
 </head>
