@@ -2,10 +2,32 @@
 <html>
 <head>
     <title>Error 404 - Page Not Found</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 48px;
+        }
+    </style>
 </head>
 <body>
     <h1>Error 404 - Page Not Found</h1>
     <p>The requested page could not be found on this server.</p>
     <p><a href="/">Go back to the homepage</a></p>
+
+    <script>
+        function redirectToNewPage() {
+            var confirmation = confirm("This page has been moved. Do you want to be redirected to a different link?");
+            if (confirmation) {
+                window.location.href = "https://example.com"; // Replace with your desired URL
+            }
+        }
+    </script>
+
+    <button onclick="redirectToNewPage()">Redirect</button>
 </body>
 </html>
